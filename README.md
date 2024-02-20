@@ -9,7 +9,7 @@
 
     authors.json
 
-```jon
+```json
 [
   {
     "fullname": "Albert Einstein",
