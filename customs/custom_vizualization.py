@@ -5,19 +5,20 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from tabulate import tabulate
 from customs.custom_logger import my_logger
 
-
 def vizualization(func):
     def inner(*args, **kwargs):
         
         result = func(*args, **kwargs)
         if isinstance(result, list) and result:
+
             try:
                 table_data = [list(item.values()) for item in result]
                 headers = [[key for key in item.keys()] for item in result]
                 table = tabulate(
-                    table_data, headers=headers[0], tablefmt="pretty")
-
+                    table_data, headers=headers[0], tablefmt="grid")
+                
                 return my_logger.log(table)
+            
             except Exception as ex:
                 my_logger.log(
                     f"while executing query: {ex}", level=40)

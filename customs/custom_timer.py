@@ -1,6 +1,5 @@
 from functools import wraps
 import time
-from time import sleep
 
 def async_time(func):
     @wraps(func)
