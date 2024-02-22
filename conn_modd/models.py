@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from mongoengine import Document, CASCADE
-from mongoengine.fields import ListField, StringField, ReferenceField
+from mongoengine.fields import ListField, StringField, ReferenceField, BooleanField, DateField
 from bson import ObjectId
 
 
@@ -19,4 +19,7 @@ class Quote(Document):
     meta = {"collection": "quotes"}
 
 class Contact(Document):
-    ...    
+    fullname = StringField()   
+    email = StringField()
+    logic_field = BooleanField(default=False)
+    date_of = DateField()

@@ -7,3 +7,4 @@ import pika
 
 from conn_modd.models import Contact
 import conn_modd.connect
+
