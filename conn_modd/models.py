@@ -17,3 +17,6 @@ class Quote(Document):
     author = ReferenceField(Author, reverse_delete_rule=CASCADE)
     quote = StringField()
     meta = {"collection": "quotes"}
+
+class Contact(Document):
+    ...    
