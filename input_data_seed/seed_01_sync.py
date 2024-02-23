@@ -15,9 +15,9 @@ from  aiofile import async_open
 
 def data_from_file(filename: str) -> dict: 
 
-    apath_to_file = AsyncPath(os.path.join(os.path.dirname(os.path.abspath(__file__)), filename))
+    path_to_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), filename)
     try:
-        with open(apath_to_file, 'r', encoding='utf-8') as fh:
+        with open(path_to_file, 'r', encoding='utf-8') as fh:
             content = json.load(fh)
             return content
     except FileNotFoundError as ex:
