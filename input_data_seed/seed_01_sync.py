@@ -9,9 +9,6 @@ from conn_modd.models import Author, Quote
 import conn_modd.connect
 
 import json
-import asyncio
-from aiopath import AsyncPath
-from  aiofile import async_open
 
 def data_from_file(filename: str) -> dict: 
 
