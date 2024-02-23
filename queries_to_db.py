@@ -62,7 +62,7 @@ def main():
         input_from_user = input(":>>> ")
 
         if input_from_user.lower() == 'show':
-            print(available_commands())
+            my_logger.log(available_commands())
 
         elif (input_from_user.lower().find('tag:') != -1 or 
                 input_from_user.lower().find('tags:') != -1):
@@ -77,7 +77,7 @@ def main():
 
         else:
             my_logger.log(f"Sorry your enter wrong command '{input_from_user}'\nPlease choose available command from the below list!\n")
-            print(available_commands())
+            my_logger.log(available_commands())
 
 if __name__ == '__main__':
     main()
