@@ -40,7 +40,7 @@ def create_tasks(numbers: int=0):
                     delivery_mode=pika.spec.PERSISTENT_DELIVERY_MODE
                 ),
             )
-        connection.close()
+    connection.close()
 
 
 if __name__ == "__main__":

@@ -21,7 +21,8 @@ def callback(ch, method, properties, body):
     if task:
         result = sms_notofocation(task)
         if result:
-            task.update(set__logic_field=True, set__date_of=datetime().now())
+            # print(datetime().now())
+            task.update(set__logic_field=True, set__date_of=datetime.now())
         else:
             my_logger.log('Failed during sms delivery!')
     else:
